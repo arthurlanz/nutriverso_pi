@@ -59,3 +59,31 @@ a{
 main {
 	margin: 0 15vw 0 15vw;
 }
+
+.accordion {
+    background-color: rgb(255, 157, 45) ;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border-radius: 100px;
+	border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.4s ease;
+}
+
+.accordion:hover {
+    background-color:  #bdeb82;
+}
+
+.panel {
+	margin: 2vw 0 0 0;
+    padding: 0 18px;
+    display: none;  /* Esconde o conteúdo por padrão */
+    background-color: #bdeb82;
+    overflow: hidden;
+	border-radius: 20px;
+	padding: 3vw 6vw 3vw 6vw;
+}

@@ -10,7 +10,7 @@
 <body>
     <header class="home">
         <nav>
-            <a href="home"><img src="src/imagens/logo.png" alt="logo" width="100" height="100"></a>
+            <a href="home"><img src="src/imagens/Logo simples circular esmaltaria preto (1).png" alt="logo" width="100" height="100"></a>
             <ul>
                 <li>
                     <a href="#monteD">Saiba Mais</a>
@@ -26,12 +26,38 @@
             <h1>Benefícios da alimentação saudável</h1>
             <p>
                 Você já se perguntou por que uma alimentação saudável é tão importante para manter o seu corpo em equilíbrio, nutrido e protegido? 
-            
-                <!-- Texto recolhível: A verdade é que comer de maneira adequada é crucial para o bom funcionamento das funções vitais do organismo. Nosso corpo precisa de um fornecimento constante de vitaminas, nutrientes e minerais para se manter ativo e saudável
-                Esses elementos essenciais são obtidos principalmente através de uma alimentação variada e equilibrada. Seguir uma dieta balanceada não traz benefícios apenas para a saúde física, mas também para o bem-estar mental. 
-                Com mais energia e disposição, quem adota hábitos alimentares saudáveis     reduz o risco de desenvolver doenças como obesidade, câncer, artrite, anemia, diabetes e hipertensão — condições muitas vezes associadas a escolhas alimentares inadequadas. Lembre-se: adotar um estilo de vida mais saudável envolve disciplina, mudança de hábitos e comprometimento. O primeiro passo nessa jornada é fazer escolhas alimentares mais conscientes e nutritivas.-->
-
             </p>
+            <button class="accordion"></button>
+            <div class="panel">
+                <p> Texto recolhível: A verdade é que comer de maneira adequada é crucial para o bom funcionamento das funções vitais do organismo. Nosso corpo precisa de um fornecimento constante de vitaminas, nutrientes e minerais para se manter ativo e saudável
+                    Esses elementos essenciais são obtidos principalmente através de uma alimentação variada e equilibrada. Seguir uma dieta balanceada não traz benefícios apenas para a saúde física, mas também para o bem-estar mental. 
+                    Com mais energia e disposição, quem adota hábitos alimentares saudáveis     reduz o risco de desenvolver doenças como obesidade, câncer, artrite, anemia, diabetes e hipertensão — condições muitas vezes associadas a escolhas alimentares inadequadas. Lembre-se: adotar um estilo de vida mais saudável envolve disciplina, mudança de hábitos e comprometimento. O primeiro passo nessa jornada é fazer escolhas alimentares mais conscientes e nutritivas.</p>
+            </div>
+            <script>
+                // Seleciona todos os botões com a classe "accordion"
+        var acc = document.getElementsByClassName("accordion");
+
+        for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        // Alterna a classe "active" para estilização adicional se necessário
+        this.classList.toggle("active");
+
+        // Seleciona o próximo elemento DOM (o conteúdo a ser expandido)
+        var panel = this.nextElementSibling;
+
+        // Verifica se o conteúdo está visível, então recolhe ou expande
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+
+            </script>
+                <!---->
+
+       
         </section>
         <section>
             <h2>Monte sua dieta personalizada</h2>
@@ -41,7 +67,7 @@
             <span>Dieta</span>
         </section>
         <footer>
-            <a href=""><img src="src/imagens/logo.png" alt="logo" width="250"></a>
+            <a href=""><img src="src/imagens/Logo simples circular esmaltaria preto (1).png" alt="logo" width="250"></a>
             
             <p>Rua dos coitados, Tadinhos, Coitadolândia, 89345-786 </p>
             <p>&copy; 2024 Desenvolvido por Arthur Lanznaster, Clara Tesser Carvalho, Gabriel Sombrio, Maria Heloiza Vitoreti e Roberta Ribeiro Todos os direitos reservados</p>
