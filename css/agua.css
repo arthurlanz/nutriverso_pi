@@ -28,6 +28,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+/*===============================================
+                GERAL
+=================================================*/
 body {
 	line-height: 1;
 }
@@ -45,13 +48,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-header.home {
-    background-color: rgb(5, 105, 5);
-    border: none;
-}
-header.home a img {
-    border-radius: 50px;
-    background-color: white;
 }
