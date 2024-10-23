@@ -50,5 +50,125 @@ table {
 	border-spacing: 0;
 }
 /*===============================================
-                TOPO
+					Header
 =================================================*/
+header {
+    background-color: #161616;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 45px;
+    opacity: 80%;
+}
+/* Estilo do header */
+header.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw;
+}
+
+header img.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+}
+
+/* Estilo da navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    margin: 0 6vw 0 0;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Estilo inicial do link */
+.animated-link {
+    color: #82f06c;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
+}
+
+/* Efeito ao passar o mouse */
+.animated-link:hover {
+    color: #70eb58; /* Muda a cor do link */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+/* Efeito de sublinhado animado */
+.animated-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #2db84d;
+    transition: width 0.3s; /* Animação para o sublinhado */
+}
+
+/* Ao passar o mouse, o sublinhado se expande */
+.animated-link:hover::after {
+    width: 100%; /* Expande o sublinhado do link */
+}
+
+/* Efeito ao clicar */
+.animated-link:active {
+    color: #17af03; /* Muda a cor ao clicar */
+}
+
+.sugestoes {
+    color: #82f06c;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
+}
+
+/* Efeito ao passar o mouse */
+.sugestoes:hover {
+    color: #70eb58; /* Muda a cor do link */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+/* Efeito de sublinhado animado */
+.sugestoes:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #2db84d;
+    transition: width 0.3s; /* Animação para o sublinhado */
+}
+
+/* Ao passar o mouse, o sublinhado se expande */
+.sugestoes:hover::after {
+    width: 100%; /* Expande o sublinhado do link */
+}
+
+/* Efeito ao clicar */
+.sugestoes:active {
+    color: #17af03; /* Muda a cor ao clicar */
+}
+/*====================================================
+                        Main
+====================================================*/                        

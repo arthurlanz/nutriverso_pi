@@ -49,3 +49,272 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    line-height: 1.6;
+}
+/*======================================
+				Header
+======================================*/
+header {
+    background-color: #161616;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 45px;
+    opacity: 80%;
+	padding: 10vw;
+}
+/* Estilo do header */
+header.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw;
+}
+
+header img.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+}
+
+/* Estilo da navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    margin: 0 6vw 0 0;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Estilo inicial do link */
+.animated-link {
+    color: #5DADE2; /* Tom de azul claro */
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
+}
+
+/* Efeito ao passar o mouse */
+.animated-link:hover {
+    color: #3498DB; /* Muda para um tom de azul mais escuro ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+/* Efeito de sublinhado animado */
+.animated-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #2874A6; /* Azul escuro para o sublinhado */
+    transition: width 0.3s; /* Animação para o sublinhado */
+}
+
+/* Ao passar o mouse, o sublinhado se expande */
+.animated-link:hover::after {
+    width: 100%; /* Expande o sublinhado do link */
+}
+
+/* Efeito ao clicar */
+.animated-link:active {
+    color: #1F618D; /* Muda para um azul mais escuro ao clicar */
+}
+
+.sugestoes {
+    color: #5DADE2; /* Tom de azul claro */
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
+}
+
+/* Efeito ao passar o mouse */
+.sugestoes:hover {
+    color: #3498DB; /* Muda para um tom de azul mais escuro ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+/* Efeito de sublinhado animado */
+.sugestoes:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #2874A6; /* Azul escuro para o sublinhado */
+    transition: width 0.3s; /* Animação para o sublinhado */
+}
+
+/* Ao passar o mouse, o sublinhado se expande */
+.sugestoes:hover::after {
+    width: 100%; /* Expande o sublinhado do link */
+}
+
+/* Efeito ao clicar */
+.sugestoes:active {
+    color: #1F618D; /* Muda para um azul mais escuro ao clicar */
+}
+/*=======================================
+				Main
+=======================================*/				
+/* Estilos da seção principal */
+main {
+    padding: 40px;
+    background-color: #383838; /* Fundo branco */
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+main  h1, h2 {
+    color: #1e90ff; /* Azul Médio */
+    margin-bottom: 20px;
+}
+
+main p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+main a {
+    color: #1a2a6c; /* Azul Escuro */
+    text-decoration: underline;
+}
+
+main a:hover {
+    color: #87cefa; /* Azul Claro */
+}
+section.funcaoprimaria h1 {
+	text-align: center;
+    margin: 8vw 0 5vw 0;
+	font-size: 2rem;
+}
+section.funcaoprimaria div.agua {
+	display: flex;
+	justify-content: center;
+}
+section.funcaoprimaria div.aguatexto {
+	width: 50%;
+    background: rgb(29, 29, 29);
+    margin: 1vw;
+    padding: 2vw 2vw 0 2vw;
+    border-radius: 12px;
+	text-align: center;
+}
+section.funcaoprimaria div.aguatexto h2 {
+	font-size: 1.2rem;
+}
+section.funcaosecundaria ul {
+	margin: 0 5vw 0 5vw;
+}
+section.funcaosecundaria ul li {
+	background: linear-gradient(to right, #1F618D, #5DADE2);
+	border-radius: 20px;
+	padding: 1.2vw;
+	margin: 2vw 1vw 0 1vw;
+	font-size: 1.2rem;
+}
+section.funcaosecundaria ul li span {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+section.funcaosecundaria h2 {
+	font-size: 1.8rem;
+	margin: 4vw 0 4vw 0;
+	text-align: center;
+}
+section.Recomendacoes {
+	margin: 6vw 0 8vw 0;
+}
+section.Recomendacoes h2 {
+    margin: 2vw 0 3vw 0;
+	font-size: 2rem;
+}
+section.Recomendacoes div.consumo {
+	display: flex;
+	justify-content: center;
+	background: rgb(29, 29, 29);
+    margin: 1vw;
+    padding: 3vw;
+    border-radius: 12px;
+}
+section.Recomendacoes div.textorec p {
+	margin: 0 7vw 0 0;
+}
+section.Recomendacoes div.consumo div p img {
+	margin: 3vw 0 0 2vw;
+}
+
+/* ====================================
+				Footer
+=====================================*/
+footer {
+    background-color: #161616;
+    color: white;
+    padding: 2vw;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+    color: #ddd;
+}
+/*Media*/
+@media (max-width: 600px) {
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    li {
+        padding: 8px;
+    }
+} 			
