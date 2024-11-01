@@ -1,0 +1,218 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/*===============================================
+                GERAL
+=================================================*/
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    line-height: 1.6;
+}
+/*===============================================
+					Header
+=================================================*/
+header {
+    background-color: #161616;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 45px;
+    opacity: 80%;
+}
+/* Estilo do header */
+header.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw;
+}
+
+header img.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+}
+
+/* Estilo da navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    margin: 0 6vw 0 0;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Estilo inicial do link */
+.animated-link {
+    color: #82f06c;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
+}
+
+/* Efeito ao passar o mouse */
+.animated-link:hover {
+    color: #70eb58; /* Muda a cor do link */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+/* Efeito de sublinhado animado */
+.animated-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #2db84d;
+    transition: width 0.3s; /* Animação para o sublinhado */
+}
+
+/* Ao passar o mouse, o sublinhado se expande */
+.animated-link:hover::after {
+    width: 100%; /* Expande o sublinhado do link */
+}
+
+/* Efeito ao clicar */
+.animated-link:active {
+    color: #17af03; /* Muda a cor ao clicar */
+}
+
+.sugestoes {
+    color: #82f06c;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
+}
+
+/* Efeito ao passar o mouse */
+.sugestoes:hover {
+    color: #70eb58; /* Muda a cor do link */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+/* Efeito de sublinhado animado */
+.sugestoes:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #2db84d;
+    transition: width 0.3s; /* Animação para o sublinhado */
+}
+
+/* Ao passar o mouse, o sublinhado se expande */
+.sugestoes:hover::after {
+    width: 100%; /* Expande o sublinhado do link */
+}
+
+/* Efeito ao clicar */
+.sugestoes:active {
+    color: #17af03; /* Muda a cor ao clicar */
+}
+/*====================================================
+                        Main
+====================================================*/            
+/* Seção principal */
+main {
+    padding: 40px;
+    background-color: #383838; /* Fundo branco */
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+main section {
+    margin-bottom: 40px;
+}
+main section h1 {
+    margin: 5.5vw 0 0 0;
+}
+
+/* Estilo dos títulos */
+h1, h2 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Estilo dos parágrafos */
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+/**/
+section.dicas{
+    margin: 3vw 0 3vw 0;
+}
+section.dicas h1{
+
+}
