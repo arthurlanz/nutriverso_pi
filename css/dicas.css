@@ -135,41 +135,6 @@ header nav ul li a:hover {
 .animated-link:active {
     color: #17af03; /* Muda a cor ao clicar */
 }
-
-.sugestoes {
-    color: #82f06c;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
-}
-
-/* Efeito ao passar o mouse */
-.sugestoes:hover {
-    color: #70eb58; /* Muda a cor do link */
-    transform: scale(1.1); /* Aumenta o tamanho */
-}
-
-/* Efeito de sublinhado animado */
-.sugestoes:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #2db84d;
-    transition: width 0.3s; /* Animação para o sublinhado */
-}
-
-/* Ao passar o mouse, o sublinhado se expande */
-.sugestoes:hover::after {
-    width: 100%; /* Expande o sublinhado do link */
-}
-
-/* Efeito ao clicar */
-.sugestoes:active {
-    color: #17af03; /* Muda a cor ao clicar */
-}
 /*====================================================
                         Main
 ====================================================*/            
@@ -190,17 +155,20 @@ main section h1 {
 }
 
 /* Estilo dos títulos */
-h1, h2 {
+h1 {
     color: #28a745;
     margin-bottom: 10px;
 }
 
 h1 {
     font-size: 2rem;
+    color: rgb(255, 165, 30);
 }
 
 h2 {
     font-size: 1.5rem;
+    color: rgb(255, 163, 26);
+    margin-bottom: 10px;
 }
 
 /* Estilo dos parágrafos */
@@ -214,5 +182,52 @@ section.dicas{
     margin: 3vw 0 3vw 0;
 }
 section.dicas h1{
+    margin: 0 0 5vw 0;
+}
+section.dicas ul div.maior{
+    display: flex;
+}
+section.dicas ul div.menor{
+    display: flex;
+}
+section.dicas ul li{
+    margin: 0 3vw 5vw 0;
+    background-color: #3f9152;
+    padding: 2vw;
+    border-radius: 20px;
+    color: #161616;
+    box-shadow: 0 5px 9px 0 rgb(32, 32, 32);
+    width: 50%;
+}
+/*========================================
+                Footer
+========================================*/
+/* Estilo do footer */
+footer {
+    background-color: #161616;
+    color: white;
+    padding: 2vw;
+}
 
+footer p {
+    margin-bottom: 10px;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+    color: #ddd;
 }

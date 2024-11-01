@@ -141,42 +141,6 @@ header nav ul li a:hover {
 .animated-link:active {
     color: #17af03; /* Muda a cor ao clicar */
 }
-
-.sugestoes {
-    color: #82f06c;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
-}
-
-/* Efeito ao passar o mouse */
-.sugestoes:hover {
-    color: #70eb58; /* Muda a cor do link */
-    transform: scale(1.1); /* Aumenta o tamanho */
-}
-
-/* Efeito de sublinhado animado */
-.sugestoes:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #2db84d;
-    transition: width 0.3s; /* Animação para o sublinhado */
-}
-
-/* Ao passar o mouse, o sublinhado se expande */
-.sugestoes:hover::after {
-    width: 100%; /* Expande o sublinhado do link */
-}
-
-/* Efeito ao clicar */
-.sugestoes:active {
-    color: #17af03; /* Muda a cor ao clicar */
-}
-
 /*=======================================
                     Main
 ========================================*/
@@ -250,8 +214,12 @@ td {
 }
 
 section.tabela h2 {
-    text-align: left;
+    text-align: center;
     margin: 3vw 0 3vw 0;
+    font-size: 30px;
+}
+section.tabela table{
+    box-shadow: 0 7px 11px 0 rgb(19, 19, 19);
 }
 section.vitaminas h2 {
     text-align: center;
@@ -264,6 +232,7 @@ section.vitaminas ul li {
     margin: 1vw;
     padding: 2vw;
     border-radius: 10px;
+    box-shadow: 0 5px 9px 0 rgb(32, 32, 32);
 }
 section.vitaminas ul {
     display: flex;
@@ -287,8 +256,11 @@ section.textos h1 {
 section.textos p {
     margin: 4vw 3vw 2vw 3vw;
     background-color: #5ba14d;
-    padding: 2vw;
+    padding: 2.2vw;
     border-radius: 50px;
+    box-shadow: 0 5px 9px 0 rgb(32, 32, 32);
+    color: rgb(32, 32, 32);
+    font-size: 19px;
 }
 section.textos h2 {
     text-align: center;
@@ -311,12 +283,12 @@ footer p {
 }
 
 footer nav ul {
-    display: flex;
     list-style: none;
+    display: flex;
 }
 
 footer nav ul li {
-    margin: 0 10px;
+    margin: 1.5vw 10px;
 }
 
 footer nav ul li a {
@@ -328,6 +300,7 @@ footer nav ul li a {
 footer nav ul li a:hover {
     color: #ddd;
 }
+
 
 
 

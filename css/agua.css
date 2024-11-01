@@ -141,41 +141,6 @@ header nav ul li a:hover {
 .animated-link:active {
     color: #1F618D; /* Muda para um azul mais escuro ao clicar */
 }
-
-.sugestoes {
-    color: #5DADE2; /* Tom de azul claro */
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
-}
-
-/* Efeito ao passar o mouse */
-.sugestoes:hover {
-    color: #3498DB; /* Muda para um tom de azul mais escuro ao passar o mouse */
-    transform: scale(1.1); /* Aumenta o tamanho */
-}
-
-/* Efeito de sublinhado animado */
-.sugestoes:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #2874A6; /* Azul escuro para o sublinhado */
-    transition: width 0.3s; /* Animação para o sublinhado */
-}
-
-/* Ao passar o mouse, o sublinhado se expande */
-.sugestoes:hover::after {
-    width: 100%; /* Expande o sublinhado do link */
-}
-
-/* Efeito ao clicar */
-.sugestoes:active {
-    color: #1F618D; /* Muda para um azul mais escuro ao clicar */
-}
 /*=======================================
 				Main
 =======================================*/				
@@ -223,6 +188,7 @@ section.funcaoprimaria div.aguatexto {
     padding: 2vw 2vw 0 2vw;
     border-radius: 12px;
 	text-align: center;
+    box-shadow: 0 7px 11px 0 rgb(19, 19, 19);
 }
 section.funcaoprimaria div.aguatexto h2 {
 	font-size: 1.2rem;
@@ -236,6 +202,7 @@ section.funcaosecundaria ul li {
 	padding: 1.2vw;
 	margin: 2vw 1vw 0 1vw;
 	font-size: 1.2rem;
+    box-shadow: 0 7px 11px 0 rgb(19, 19, 19);
 }
 section.funcaosecundaria ul li span {
 	font-size: 1.3rem;
@@ -260,6 +227,7 @@ section.Recomendacoes div.consumo {
     margin: 1vw;
     padding: 3vw;
     border-radius: 12px;
+    box-shadow: 0 7px 11px 0 rgb(19, 19, 19);
 }
 section.Recomendacoes div.textorec p {
 	margin: 0 7vw 0 0;

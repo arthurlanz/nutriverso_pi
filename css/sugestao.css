@@ -140,41 +140,6 @@ header nav ul li a:hover {
 .animated-link:active {
     color: #17af03; /* Muda a cor ao clicar */
 }
-
-.sugestoes {
-    color: #82f06c;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
-}
-
-/* Efeito ao passar o mouse */
-.sugestoes:hover {
-    color: #70eb58; /* Muda a cor do link */
-    transform: scale(1.1); /* Aumenta o tamanho */
-}
-
-/* Efeito de sublinhado animado */
-.sugestoes:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #2db84d;
-    transition: width 0.3s; /* Animação para o sublinhado */
-}
-
-/* Ao passar o mouse, o sublinhado se expande */
-.sugestoes:hover::after {
-    width: 100%; /* Expande o sublinhado do link */
-}
-
-/* Efeito ao clicar */
-.sugestoes:active {
-    color: #17af03; /* Muda a cor ao clicar */
-}
 /*====================================================
                         Main
 ====================================================*/            
@@ -205,12 +170,18 @@ h1 {
 }
 
 h2 {
+    font-size: 2.5rem;
+}
+h3{
     font-size: 1.5rem;
+}
+h4{
+    font-size: 1.2rem;
 }
 
 /* Estilo dos parágrafos */
 p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin-bottom: 20px;
     text-align: justify;
 }
@@ -227,22 +198,36 @@ section h3{
     font-weight: bold;
     text-align: center;
 }
-section h4{
+section ul li h4{
     color: #28a745;
     font-weight: bolder;
+    text-align: center;
+    margin: 5vw 0 4vw 0;
+    font-size: 1.6rem;
 }
 section ul li p img{
     margin: 2vw;
-    width: 150px;
+    width: 300px;
     height: auto;
 }
 section ul li div.pai {
     display: flex;
+    align-items: center;
+    
 }
 section ul li div.texto{
-    margin: 5vw ;
-    width: 50%;
+    margin:19vw 10vw 5vw 10vw;
+    font-size: 1.3rem;
 }
+section ul li div.texto p.baixo{
+margin: 0 0 5vw 0;
+}
+section ul li p.img {
+    background-color: #0c8d2a;
+    text-align: center;
+    border-radius: 20px;
+}
+
 
 /*========================================
                 Footer
