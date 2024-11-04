@@ -162,13 +162,15 @@ h1 {
 
 h1 {
     font-size: 2rem;
-    color: rgb(255, 165, 30);
+    color:  rgb(197, 115, 37);
+    font-weight: bolder ;
 }
 
 h2 {
     font-size: 1.5rem;
-    color: rgb(255, 163, 26);
+    color:  rgb(202, 112, 27);
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /* Estilo dos parágrafos */
@@ -192,7 +194,7 @@ section.dicas ul div.menor{
 }
 section.dicas ul li{
     margin: 0 3vw 5vw 0;
-    background-color: #3f9152;
+    background: linear-gradient(to right, #296d39, #146627);
     padding: 2vw;
     border-radius: 20px;
     color: #161616;

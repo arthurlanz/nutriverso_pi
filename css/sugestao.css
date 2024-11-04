@@ -161,7 +161,7 @@ main section h1 {
 
 /* Estilo dos títulos */
 h1, h2 {
-    color: #28a745;
+    color: #08861d;
     margin-bottom: 10px;
 }
 
@@ -171,6 +171,7 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
+    font-weight: bolder;
 }
 h3{
     font-size: 1.5rem;
@@ -193,13 +194,18 @@ section h2{
     text-align: center;
 }
 section h3{
-    color: orange;
-    margin: 3vw 0;
+    color: rgb(197, 115, 37);
+    margin: 3vw 0 0 0;
     font-weight: bold;
     text-align: center;
+    text-decoration: underline;
+}
+section ul li{
+    border-bottom: 1px solid #444444;
+    padding: 20px;
 }
 section ul li h4{
-    color: #28a745;
+    color: #08861d;
     font-weight: bolder;
     text-align: center;
     margin: 5vw 0 4vw 0;
@@ -223,9 +229,10 @@ section ul li div.texto p.baixo{
 margin: 0 0 5vw 0;
 }
 section ul li p.img {
-    background-color: #0c8d2a;
+    background-color: rgb(197, 115, 37);
     text-align: center;
     border-radius: 20px;
+    box-shadow: #000000;
 }
 
 

@@ -108,7 +108,7 @@ header nav ul li a:hover {
 
 /* Estilo inicial do link */
 .animated-link {
-    color: #82f06c;
+    color: #1f850b;
     text-decoration: none;
     position: relative;
     transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
@@ -116,7 +116,7 @@ header nav ul li a:hover {
 
 /* Efeito ao passar o mouse */
 .animated-link:hover {
-    color: #70eb58; /* Muda a cor do link */
+    color: #5add40; /* Muda a cor do link */
     transform: scale(1.1); /* Aumenta o tamanho */
 }
 
@@ -161,12 +161,24 @@ main section {
 }
 main section h1 {
     margin: 5.5vw 0 0 0;
+    font-weight: bolder;
+    color: rgb(197, 115, 37);
 }
 
 /* Estilo dos títulos */
 h1, h2 {
-    color: #28a745;
+    color: rgb(197, 115, 37);
     margin-bottom: 10px;
+    font-weight: bolder;
+}
+h3{
+    color: #08861d;
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 3vw 0 4vw 0;
+    text-decoration: underline;
 }
 
 h1 {
@@ -192,7 +204,6 @@ table {
     border-collapse: collapse;
     background-color: #c0de96;
 }
-
 th, td {
     padding: 10px 15px;
     text-align: center;
@@ -228,7 +239,7 @@ section.vitaminas h2 {
 }
 section.vitaminas ul li {
     width: 25%;
-    background: linear-gradient(to right, black, #424242);
+    background: linear-gradient(to right, rgb(37, 133, 35), #9e6714);
     margin: 1vw;
     padding: 2vw;
     border-radius: 10px;
@@ -239,15 +250,17 @@ section.vitaminas ul {
     justify-content: center;
     flex-wrap: wrap;
 }
-section.vitaminas ul li h3 {
+section.vitaminas ul li h4 {
     text-align: center;
     margin: 1vw 0 2vw 0;
     font-weight: bold;
     font-size: 1.2rem;
+    color: black;
 }
 section.vitaminas ul li p {
     font-size: small;
     margin: 0 1vw 0 1vw;
+    color: black;
 }
 section.textos h1 {
     text-align: center;
@@ -255,7 +268,7 @@ section.textos h1 {
 }
 section.textos p {
     margin: 4vw 3vw 2vw 3vw;
-    background-color: #5ba14d;
+    background: linear-gradient(to bottom, #2e8b44, #146627);
     padding: 2.2vw;
     border-radius: 50px;
     box-shadow: 0 5px 9px 0 rgb(32, 32, 32);
