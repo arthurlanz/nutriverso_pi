@@ -51,7 +51,7 @@ table {
 }
 body {
     font-family: 'Poppins', sans-serif;;
-    background-color: #2c2c2c;
+    background-color: #f7efda;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -60,7 +60,7 @@ body {
 =================================================*/
 
 header {
-    background-color: #161616;
+    background-color: #badd7f;
     position: fixed;
     top: 0;
     left: 0;
@@ -145,10 +145,44 @@ header nav ul li a:hover {
                     Main
 ========================================*/
 
+/* Estilo dos títulos */
+h1, h2 {
+    color:  #e68176;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+h3{
+    color: #8bbc5a;
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 3vw 0 4vw 0;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 10vw 0 5vw 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Estilo dos parágrafos */
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
 /* Seção principal */
+
 main {
     padding: 40px;
-    background-color: #383838; /* Fundo branco */
+    background-color: #f7efda;
     margin: 20px auto;
     max-width: 1200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -162,39 +196,50 @@ main section {
 main section h1 {
     margin: 5.5vw 0 0 0;
     font-weight: bolder;
-    color: rgb(197, 115, 37);
+    color: #e68176;
 }
 
-/* Estilo dos títulos */
-h1, h2 {
-    color: rgb(197, 115, 37);
-    margin-bottom: 10px;
+/*Carrosel*/
+.textos{
+    margin: 4vw 0 0 0;
+}
+.carrossel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .seta {
+    font-size: 35px;
+    cursor: pointer;
+    user-select: none;
+    color: #e68176;
     font-weight: bolder;
-}
-h3{
-    color: #08861d;
-    margin-bottom: 10px;
-    font-size: 1.7rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 3vw 0 4vw 0;
-    text-decoration: underline;
-}
+  }
 
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-/* Estilo dos parágrafos */
-p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+  .texto {
+    border: 20px solid #8bbc5a;
+    border-radius: 20px;
+    padding: 10px 20px;
+    min-width: 300px;
+    max-width: 400px;
     text-align: justify;
-}
+    background-color: #badd7f;
+    color: #161616;
+  }
+
+  .texto > div {
+    display: none;
+  }
+
+  .texto > div.ativo {
+    display: block;
+  }
+
+/*tabela*/
+
 .tabela {
     padding: 20px;
 }
@@ -202,7 +247,7 @@ p {
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #c0de96;
+    background-color: #badd7f;
 }
 th, td {
     padding: 10px 15px;
@@ -230,20 +275,84 @@ section.tabela h2 {
     font-size: 30px;
 }
 section.tabela table{
-    box-shadow: 0 7px 11px 0 rgb(19, 19, 19);
+    box-shadow: 0 7px 11px 0 rgb(61, 116, 47);
 }
+
+/*textos*/
+
+section.textos h1 {
+    text-align: center;
+    margin: 10vw 0 5vw 0;
+}
+section.textos p {
+    margin: 4vw 3vw 2vw 3vw;
+    background-color: #ffccc3;
+    border: 20px solid #e68176;
+    padding: 2.2vw;
+    border-radius: 50px;
+    color: rgb(32, 32, 32);
+    font-size: 19px;
+}
+section.textos h2 {
+    text-align: center;
+    margin: 6vw 0 2vw 0;
+    font-size: 34px;
+}
+.conteudo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .conteudo.visivel {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .bloco {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+.container {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .fade-in {
+    animation: fadeIn 1s forwards ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/*vitaminas*/
+
 section.vitaminas h2 {
     text-align: center;
     margin: 5vw 0 2vw 0;
     font-size: 34px;
 }
-section.vitaminas ul li {
+section.vitaminas ul li.um {
     width: 25%;
-    background: linear-gradient(to right, rgb(37, 133, 35), #9e6714);
+    background: linear-gradient(to right,#8bbc5a, #badd7f);
     margin: 1vw;
     padding: 2vw;
     border-radius: 10px;
-    box-shadow: 0 5px 9px 0 rgb(32, 32, 32);
+    box-shadow: 0 5px 9px 0 rgb(84, 172, 91);
+}
+section.vitaminas ul li.dois {
+    width: 25%;
+    background: linear-gradient(to right, #e68176, #ffbaae);
+    margin: 1vw;
+    padding: 2vw;
+    border-radius: 10px;
+    box-shadow: 0 5px 9px 0 rgb(187, 77, 77);
 }
 section.vitaminas ul {
     display: flex;
@@ -258,27 +367,9 @@ section.vitaminas ul li h4 {
     color: black;
 }
 section.vitaminas ul li p {
-    font-size: small;
+    font-size: ;
     margin: 0 1vw 0 1vw;
     color: black;
-}
-section.textos h1 {
-    text-align: center;
-    margin: 10vw 0 5vw 0;
-}
-section.textos p {
-    margin: 4vw 3vw 2vw 3vw;
-    background: linear-gradient(to bottom, #2e8b44, #146627);
-    padding: 2.2vw;
-    border-radius: 50px;
-    box-shadow: 0 5px 9px 0 rgb(32, 32, 32);
-    color: rgb(32, 32, 32);
-    font-size: 19px;
-}
-section.textos h2 {
-    text-align: center;
-    margin: 6vw 0 2vw 0;
-    font-size: 34px;
 }
 
 /*========================================
@@ -286,8 +377,8 @@ section.textos h2 {
 ========================================*/
 /* Estilo do footer */
 footer {
-    background-color: #161616;
-    color: white;
+    background-color: #8bbc5a;
+    color: rgb(0, 0, 0);
     padding: 2vw;
 }
 
@@ -305,13 +396,13 @@ footer nav ul li {
 }
 
 footer nav ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1.5rem;
     transition: color 0.3s;
 }
 
 footer nav ul li a:hover {
-    color: #ddd;
+    color: #000000;
 }
 
 
