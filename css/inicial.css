@@ -60,7 +60,7 @@ body {
 =================================================*/
 
 header {
-    background-color: #badd7f;
+    background-color: #90c44d;
     position: fixed;
     top: 0;
     left: 0;
@@ -147,7 +147,7 @@ header nav ul li a:hover {
 
 /* Estilo dos títulos */
 h1, h2 {
-    color:  #e68176;
+    color:  #f56980;
     margin-bottom: 10px;
     font-weight: bolder;
 }
@@ -220,13 +220,13 @@ main section h1 {
   }
 
   .texto {
-    border: 20px solid #8bbc5a;
+    border: 20px solid #90c44d;
     border-radius: 20px;
     padding: 10px 20px;
     min-width: 300px;
     max-width: 400px;
     text-align: justify;
-    background-color: #badd7f;
+    background-color: #D1F2A5;
     color: #161616;
   }
 
@@ -247,7 +247,7 @@ main section h1 {
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #badd7f;
+    background-color: #D1F2A5;
 }
 th, td {
     padding: 10px 15px;
@@ -256,7 +256,7 @@ th, td {
 }
 
 th {
-    background-color: #8bbc5a;
+    background-color: #90c44d;
     color: #fff;
 }
 
