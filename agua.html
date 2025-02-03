@@ -97,7 +97,32 @@
                 </div>
             </div>
         </section>
+        <section class="calc">
+            <title>Cálculo de Quantidade de Água</title>
+            <script>
+                function calcular() {
+                     peso = parseFloat(document.getElementById("peso").value);
 
+                    if (isNaN(peso) || peso <= 0) {
+                        alert("Por favor, insira um peso válido!");
+                        return;
+                    }
+        
+                     litros = peso * 0.035;
+        
+
+                    document.getElementById("resultado").innerText = "Você deve beber " + litros.toFixed(2) + " litros de água por dia.";
+                }
+            </script>
+            <h1>Cálculo de Quantidade de Água</h1>
+            <p>Digite seu peso (em kg) para saber quantos litros de água você deve beber por dia:</p>
+
+             <input type="number" id="peso" placeholder="Peso em kg" required>
+
+            <button onclick="calcular()">CALCULAR</button>
+
+            <p id="resultado"></p>
+        </section>
     </main>
     <footer>
         <p>Insituto Federal Catarinense Campus Araquari, Rodovia BR 280, Km 27, nº 5200. Bairro Colégio Agrícola. CEP 89245-000. Araquari (SC).<br></p>

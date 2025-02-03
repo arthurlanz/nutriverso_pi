@@ -235,7 +235,36 @@ section.Recomendacoes div.textorec p {
 section.Recomendacoes div.consumo div p img {
 	margin: 3vw 0 0 2vw;
 }
+section.calc h1 {
+    font-size: 2rem;
+    margin: 3vw;
+}
+section.calc input {
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 30px;
+    padding: 1rem;
+    font-weight: bold;
+    margin: 2vw;
+    color: #ffffff;
+    text-align: center;
+}
+section.calc button {
+    background-color: #1e90ff;
+    border-radius: 30px;
+    border: none;
+    padding: 1rem;
+    margin: 2vw;
+    font-weight: bold;
+}
+section.calc {
+    text-align: center;
+    background-color:#161616;
+    border-radius: 20px;
+    padding: 2vw;
+    box-shadow: 0 5px 9px black;
 
+}
 /* ====================================
 				Footer
 =====================================*/
