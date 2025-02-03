@@ -3,63 +3,152 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 /*===============================================
                 GERAL
 =================================================*/
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #2c2c2c;
+    background-color:#78c6f7;;
     color: #ffffff;
     line-height: 1.6;
 }
+
 /*======================================
 				Header
 ======================================*/
 header {
-    background-color: #161616;
+    background-color:  #5DADE2;
     position: fixed;
     top: 0;
     left: 0;
@@ -67,8 +156,9 @@ header {
     z-index: 1000;
     height: 45px;
     opacity: 80%;
-	padding: 10vw;
+    padding: 10vw;
 }
+
 /* Estilo do header */
 header.home {
     display: flex;
@@ -108,16 +198,20 @@ header nav ul li a:hover {
 
 /* Estilo inicial do link */
 .animated-link {
-    color: #5DADE2; /* Tom de azul claro */
+    color: #ffffff;
+    /* Tom de azul claro */
     text-decoration: none;
     position: relative;
-    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
+    transition: color 0.3s, transform 0.3s;
+    /* Animação para cor e tamanho */
 }
 
 /* Efeito ao passar o mouse */
 .animated-link:hover {
-    color: #3498DB; /* Muda para um tom de azul mais escuro ao passar o mouse */
-    transform: scale(1.1); /* Aumenta o tamanho */
+    color: #ffffff;
+    /* Muda para um tom de azul mais escuro ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta o tamanho */
 }
 
 /* Efeito de sublinhado animado */
@@ -128,34 +222,42 @@ header nav ul li a:hover {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background-color: #2874A6; /* Azul escuro para o sublinhado */
-    transition: width 0.3s; /* Animação para o sublinhado */
+    background-color: #ffffff;
+    /* Azul escuro para o sublinhado */
+    transition: width 0.3s;
+    /* Animação para o sublinhado */
 }
 
 /* Ao passar o mouse, o sublinhado se expande */
 .animated-link:hover::after {
-    width: 100%; /* Expande o sublinhado do link */
+    width: 100%;
+    /* Expande o sublinhado do link */
 }
 
 /* Efeito ao clicar */
 .animated-link:active {
-    color: #1F618D; /* Muda para um azul mais escuro ao clicar */
+    color: #1F618D;
+    /* Muda para um azul mais escuro ao clicar */
 }
+
 /*=======================================
 				Main
-=======================================*/				
+=======================================*/
 /* Estilos da seção principal */
 main {
     padding: 40px;
-    background-color: #383838; /* Fundo branco */
+    background-color: #fff1e2;
+    /* Fundo branco */
     margin: 20px auto;
     max-width: 1200px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-main  h1, h2 {
-    color: #1e90ff; /* Azul Médio */
+main h1,
+h2 {
+    color: #337ac2;
+    font-weight: bolder;
+    /* Azul Médio */
     margin-bottom: 20px;
 }
 
@@ -165,82 +267,99 @@ main p {
 }
 
 main a {
-    color: #1a2a6c; /* Azul Escuro */
+    color: #1a2a6c;
+    /* Azul Escuro */
     text-decoration: underline;
 }
 
 main a:hover {
-    color: #87cefa; /* Azul Claro */
+    color: #78c6f7;
+    /* Azul Claro */
 }
+
 section.funcaoprimaria h1 {
-	text-align: center;
+    text-align: center;
     margin: 8vw 0 5vw 0;
-	font-size: 2rem;
+    font-size: 2rem;
 }
+
 section.funcaoprimaria div.agua {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 section.funcaoprimaria div.aguatexto {
-	width: 50%;
-    background: rgb(29, 29, 29);
+    width: 50%;
+    background-color: #78c6f7;
+    /* Fundo branco */
     margin: 1vw;
     padding: 2vw 2vw 0 2vw;
     border-radius: 12px;
-	text-align: center;
-    box-shadow: 0 7px 11px 0 rgb(19, 19, 19);
+    text-align: center;
+ 
 }
+
 section.funcaoprimaria div.aguatexto h2 {
-	font-size: 1.2rem;
+    font-size: 1.2rem;
 }
+
 section.funcaosecundaria ul {
-	margin: 0 5vw 0 5vw;
+    margin: 0 5vw 0 5vw;
 }
+
 section.funcaosecundaria ul li {
-	background: linear-gradient(to right, #1F618D, #5DADE2);
-	border-radius: 20px;
-	padding: 1.2vw;
-	margin: 2vw 1vw 0 1vw;
-	font-size: 1.2rem;
-    box-shadow: 0 7px 11px 0 rgb(19, 19, 19);
+    background: linear-gradient(to right, #2a83be, #5DADE2);
+    border-radius: 20px;
+    padding: 1.2vw;
+    margin: 2vw 1vw 0 1vw;
+    font-size: 1.2rem;
 }
+
 section.funcaosecundaria ul li span {
-	font-size: 1.3rem;
-	font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
+
 section.funcaosecundaria h2 {
-	font-size: 1.8rem;
-	margin: 4vw 0 4vw 0;
-	text-align: center;
+    font-size: 1.8rem;
+    margin: 4vw 0 4vw 0;
+    text-align: center;
 }
+
 section.Recomendacoes {
-	margin: 6vw 0 8vw 0;
+    margin: 6vw 0 8vw 0;
 }
+
 section.Recomendacoes h2 {
     margin: 2vw 0 3vw 0;
-	font-size: 2rem;
+    font-size: 2rem;
 }
+
 section.Recomendacoes div.consumo {
-	display: flex;
-	justify-content: center;
-	background: rgb(29, 29, 29);
+    display: flex;
+    justify-content: center;
+    background: #78c6f7;
     margin: 1vw;
     padding: 3vw;
     border-radius: 12px;
-    box-shadow: 0 7px 11px 0 rgb(19, 19, 19);
+    
 }
+
 section.Recomendacoes div.textorec p {
-	margin: 0 7vw 0 0;
+    margin: 0 7vw 0 0;
 }
+
 section.Recomendacoes div.consumo div p img {
-	margin: 3vw 0 0 2vw;
+    margin: 3vw 0 0 2vw;
 }
+
 section.calc h1 {
     font-size: 2rem;
     margin: 3vw;
 }
+
 section.calc input {
-    background-color: #2c2c2c;
+    background-color: #78c6f7;
     border: none;
     border-radius: 30px;
     padding: 1rem;
@@ -249,6 +368,7 @@ section.calc input {
     color: #ffffff;
     text-align: center;
 }
+
 section.calc button {
     background-color: #1e90ff;
     border-radius: 30px;
@@ -257,19 +377,22 @@ section.calc button {
     margin: 2vw;
     font-weight: bold;
 }
+
 section.calc {
     text-align: center;
-    background-color:#161616;
+    background-color: #78c6f7;
+    ;
     border-radius: 20px;
     padding: 2vw;
-    box-shadow: 0 5px 9px black;
+    
 
 }
+
 /* ====================================
 				Footer
 =====================================*/
 footer {
-    background-color: #161616;
+    background-color: #78c6f7;
     color: white;
     padding: 2vw;
 }
@@ -296,6 +419,7 @@ footer nav ul li a {
 footer nav ul li a:hover {
     color: #ddd;
 }
+
 /*Media*/
 @media (max-width: 600px) {
     section {
@@ -314,4 +438,4 @@ footer nav ul li a:hover {
     li {
         padding: 8px;
     }
-} 			
+}
