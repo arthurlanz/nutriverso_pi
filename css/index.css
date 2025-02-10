@@ -141,6 +141,25 @@ header nav ul li a:hover {
 .animated-link:active {
     color: #17af03; /* Muda a cor ao clicar */
 }
+.menu-toggle {
+    display: none; /* Inicialmente, escondido */
+    font-size: 2.5rem; /* Tamanho do ícone do menu */
+    color: white; /* Cor do ícone */
+    cursor: pointer;
+    padding: 10px; /* Tamanho da área clicável */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove qualquer borda */
+    z-index: 1001; /* Garante que o botão fique acima de outros elementos */
+    transition: transform 0.3s, background-color 0.3s ease; /* Animação de transformação e cor */
+}
+
+/* Animação de hover para o botão de menu */
+.menu-toggle:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do botão ao passar o mouse */
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo levemente escuro */
+    border-radius: 5px; /* Torna os cantos do botão arredondados */
+}
+
 /*=======================================
                     Main
 ========================================*/
@@ -374,7 +393,6 @@ section.vitaminas ul li p {
 /*========================================
                 Footer
 ========================================*/
-/* Estilo do footer */
 footer {
     background-color: #8bbc5a;
     color: rgb(0, 0, 0);
@@ -388,6 +406,8 @@ footer p {
 footer nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Permite que os itens do menu quebrem para a próxima linha, se necessário */
+    justify-content: center; /* Centraliza os itens */
 }
 
 footer nav ul li {
@@ -404,6 +424,152 @@ footer nav ul li a:hover {
     color: #000000;
 }
 
+/*=======================
+        responsividade
+=======================*/
+@media (max-width: 768px) {
+    /* Mostrar o botão de menu */
+    .menu-toggle {
+        display: block; /* Torna o botão visível */
+    }
+    
+    /* Garantir que o ícone do menu esteja visível e centralizado */
+    header.home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vw;
+    }
 
+    /* Garantir que o botão do menu tenha tamanho adequado */
+    .menu-toggle {
+        font-size: 2.5rem; /* Ajuste o tamanho do ícone */
+        color: white;
+        cursor: pointer;
+        padding: 15px; /* Aumenta o tamanho da área clicável */
+        border-radius: 50%; /* Torna o botão redondo */
+    }
+    /* Alterar a visibilidade do menu quando estiver aberto */
+    header nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
 
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
 
+    header nav ul li {
+        margin: 10px 0;
+    }
+    header.home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vw;
+    }
+
+    /* Ajuste no tamanho da logo */
+    header img.logo {
+        width: 60px;
+        height: auto;
+    }
+
+    .menu-open nav {
+        display: flex;
+    }
+
+    header nav ul li a {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 1.4rem;
+        color: white;
+    }
+
+    main {
+        padding: 15px;
+        margin: 10px auto;
+        width: 95%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin: 8vw 0 3vw 0;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        margin: 2vw 0 3vw 0;
+    }
+
+    p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    .carrossel {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .texto {
+        min-width: 200px;
+        max-width: 90%;
+    }
+
+    table {
+        font-size: 0.8rem;
+        overflow-x: auto;
+        display: block;
+        width: 100%;
+    }
+
+    section.vitaminas ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    section.vitaminas ul li.um, 
+    section.vitaminas ul li.dois {
+        width: 90%;
+        padding: 4vw;
+        margin: 2vw 0;
+    }
+    
+    section.textos p {
+        font-size: 1rem;
+        padding: 5vw;
+    }
+    footer {
+        padding: 4vw; /* Ajusta o padding para telas pequenas */
+    }
+
+    footer nav ul {
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center; /* Centraliza os itens em telas pequenas */
+    }
+
+    footer nav ul li {
+        margin: 1.5vw 0; /* Ajusta o espaçamento entre os itens */
+    }
+
+    footer nav ul li a {
+        font-size: 1.2rem; /* Diminui o tamanho da fonte para telas pequenas */
+    }
+
+}

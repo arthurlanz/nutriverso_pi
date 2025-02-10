@@ -13,10 +13,12 @@
 
 <body class="inicial">
     <header class="home">
-        <a href="inicial.html"><img class="logo" src="src/imagens/logo-removebg-preview.png" alt="logo" width="100"
-                height="100"></a>
+        <a href="index.html">
+            <img class="logo" src="src/imagens/logo-removebg-preview.png" alt="logo" width="100" height="100">
+        </a>
+        <!-- Botão de menu toggle -->
+        <div class="menu-toggle">☰</div>
         <nav>
-
             <ul>
                 <li>
                     <a href="sugestao.html" class="animated-link">Sugestões</a>
@@ -33,6 +35,13 @@
             </ul>
         </nav>
     </header>
+
+    <script>
+        // JavaScript para alternar a visibilidade do menu
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('header').classList.toggle('menu-open');
+        });
+    </script>
     <main>
         <section class="textos"></section>
         <div class="container fade-in">
