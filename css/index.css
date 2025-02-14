@@ -51,7 +51,7 @@ table {
 }
 body {
     font-family: 'Poppins', sans-serif;;
-    background-color: #f7efda;
+    background-color: #fff1e2;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -201,7 +201,7 @@ p {
 
 main {
     padding: 40px;
-    background-color: #f7efda;
+    background-color: #fff1e2;
     margin: 20px auto;
     max-width: 1200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
