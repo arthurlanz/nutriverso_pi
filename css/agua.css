@@ -405,6 +405,16 @@ section.calc {
     
 
 }
+section.insta{
+    margin: 4vw 0 0 0;
+    text-align: center;
+    background-color: #78c6f7;
+    padding: 3vw 2vw 2vw 2vw;
+    border-radius: 20px;
+}
+section.insta a{
+    color: white;
+}
 
 /* ====================================
 				Footer
