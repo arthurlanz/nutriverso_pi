@@ -14,7 +14,10 @@
 <body>
     <header class="home">
         <a href="index.html"><img class="logo" src="src/imagens/logo-removebg-preview.png" alt="logo" width="100"
-                height="100"></a>
+                height="100">
+        </a>
+        <!-- Botão de menu toggle -->
+        <div class="menu-toggle">☰</div>
         <nav>
 
             <ul>
@@ -33,6 +36,12 @@
             </ul>
         </nav>
     </header>
+    <script>
+        // JavaScript para alternar a visibilidade do menu
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('header').classList.toggle('menu-open');
+        });
+    </script>
     <main>
         <section class="cafemanha">
             <h2>

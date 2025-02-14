@@ -140,6 +140,24 @@ header nav ul li a:hover {
 .animated-link:active {
     color: #17af03; /* Muda a cor ao clicar */
 }
+.menu-toggle {
+    display: none; /* Inicialmente, escondido */
+    font-size: 2.5rem; /* Tamanho do ícone do menu */
+    color: white; /* Cor do ícone */
+    cursor: pointer;
+    padding: 10px; /* Tamanho da área clicável */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove qualquer borda */
+    z-index: 1001; /* Garante que o botão fique acima de outros elementos */
+    transition: transform 0.3s, background-color 0.3s ease; /* Animação de transformação e cor */
+}
+
+/* Animação de hover para o botão de menu */
+.menu-toggle:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do botão ao passar o mouse */
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo levemente escuro */
+    border-radius: 5px; /* Torna os cantos do botão arredondados */
+}
 /*====================================================
                         Main
 ====================================================*/            
@@ -269,4 +287,133 @@ footer nav ul li a {
 footer nav ul li a:hover {
     color: #ddd;
 }
+/*=======================
+        responsividade
+=======================*/
+@media (max-width: 768px) {
+    /* Mostrar o botão de menu */
+    .menu-toggle {
+        display: block; /* Torna o botão visível */
+    }
+    
+    /* Garantir que o ícone do menu esteja visível e centralizado */
+    header.home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vw;
+    }
 
+    /* Garantir que o botão do menu tenha tamanho adequado */
+    .menu-toggle {
+        font-size: 2.5rem; /* Ajuste o tamanho do ícone */
+        color: white;
+        cursor: pointer;
+        padding: 15px; /* Aumenta o tamanho da área clicável */
+        border-radius: 50%; /* Torna o botão redondo */
+    }
+    /* Alterar a visibilidade do menu quando estiver aberto */
+    header nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+    header.home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vw;
+    }
+
+    /* Ajuste no tamanho da logo */
+    header img.logo {
+        width: 60px;
+        height: auto;
+    }
+
+    .menu-open nav {
+        display: flex;
+    }
+
+    header nav ul li a {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 1.4rem;
+        color: white;
+    }
+        main {
+            padding: 20px;
+            margin: 10px;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        
+        main section h1 {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+        }
+        
+        h4 {
+            font-size: 1.1rem;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+        
+        section ul li div.pai {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        section ul li div.texto {
+            margin: 5vw 0;
+        }
+        
+        section ul li p.img img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+        }
+        
+        /* Ajustes no Footer */
+        footer {
+            text-align: center;
+            padding: 3vw;
+        }
+        
+        footer nav ul {
+            flex-direction: column;
+        }
+        
+        footer nav ul li {
+            margin: 5px 0;
+        }
+        
+        footer nav ul li a {
+            font-size: 1.3rem;
+        }
+    }

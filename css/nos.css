@@ -1,0 +1,381 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/*===============================================
+                GERAL
+=================================================*/
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;;
+    background-color: #f7efda;
+    color: #ffffff;
+    line-height: 1.6;
+}
+body.inicial {
+    background-color: #f4f4e8; /* Tom claro para melhor contraste */
+    color: #333; /* Melhor legibilidade */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+/*================================================
+                   Header
+=================================================*/
+
+header {
+    background-color: #90c44d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 45px;
+    opacity: 80%;
+}
+/* Estilo do header */
+header.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw;
+}
+
+header img.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+}
+
+/* Estilo da navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    margin: 0 6vw 0 0;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Estilo inicial do link */
+.animated-link {
+    color: #1f850b;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s; /* Animação para cor e tamanho */
+}
+
+/* Efeito ao passar o mouse */
+.animated-link:hover {
+    color: #5add40; /* Muda a cor do link */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+/* Efeito de sublinhado animado */
+.animated-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #2db84d;
+    transition: width 0.3s; /* Animação para o sublinhado */
+}
+
+/* Ao passar o mouse, o sublinhado se expande */
+.animated-link:hover::after {
+    width: 100%; /* Expande o sublinhado do link */
+}
+
+/* Efeito ao clicar */
+.animated-link:active {
+    color: #17af03; /* Muda a cor ao clicar */
+}
+.menu-toggle {
+    display: none; /* Inicialmente, escondido */
+    font-size: 2.5rem; /* Tamanho do ícone do menu */
+    color: white; /* Cor do ícone */
+    cursor: pointer;
+    padding: 10px; /* Tamanho da área clicável */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove qualquer borda */
+    z-index: 1001; /* Garante que o botão fique acima de outros elementos */
+    transition: transform 0.3s, background-color 0.3s ease; /* Animação de transformação e cor */
+}
+
+/* Animação de hover para o botão de menu */
+.menu-toggle:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do botão ao passar o mouse */
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo levemente escuro */
+    border-radius: 5px; /* Torna os cantos do botão arredondados */
+}
+/*================================================
+                   main
+=================================================*/
+section {
+    max-width: 1100px;
+    margin: 5vw auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    color: #4a8a2f; /* Verde mais equilibrado */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #cc6b2f; /* Tom terroso para harmonizar */
+    margin-bottom: 10px;
+    border-bottom: 3px solid #cc6b2f;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section p {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-left: 20px;
+}
+
+section ul li {
+    font-size: 1.3rem;
+    color: #4a8a2f;
+    margin: 5px 0;
+    font-weight: 500;
+}
+/*================================================
+                   footer
+=================================================*/
+footer {
+    background-color: #8bbc5a;
+    color: rgb(0, 0, 0);
+    padding: 2vw;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens do menu quebrem para a próxima linha, se necessário */
+    justify-content: center; /* Centraliza os itens */
+}
+
+footer nav ul li {
+    margin: 1.5vw 10px;
+}
+
+footer nav ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+    color: #000000;
+}
+/*=======================
+        responsividade
+=======================*/
+@media (max-width: 768px) {
+    /* Mostrar o botão de menu */
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Ajuste no header */
+    header.home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vw;
+    }
+
+    /* Ajuste do botão menu */
+    .menu-toggle {
+        font-size: 2.5rem;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+    }
+    
+    /* Alterar a visibilidade do menu quando estiver aberto */
+    header nav {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+     
+    .menu-open nav {
+        display: flex;
+    }
+
+    header nav ul li a {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 1.4rem;
+        color: white;
+        position: relative;
+        transition: color 0.3s, transform 0.3s;
+    }
+
+    /* Restaurando a animação dos links */
+    header nav ul li a:hover {
+        color: #5add40;
+        transform: scale(1.1);
+    }
+
+    header nav ul li a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background-color: #2db84d;
+        transition: width 0.3s;
+    }
+
+    header nav ul li a:hover::after {
+        width: 100%;
+    }
+
+    /* Ajuste no tamanho da logo */
+    header img.logo {
+        width: 60px;
+        height: auto;
+    }
+    
+    /* Ajuste no main */
+    section {
+        max-width: 90%;
+        margin: 5vw auto;
+        padding: 20px;
+    }
+
+    section h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+    
+    section ul li {
+        font-size: 1.1rem;
+    }
+    
+    /* Ajuste no footer */
+    footer {
+        text-align: center;
+        padding: 4vw;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
+
+    footer nav ul li {
+        margin: 10px 0;
+    }
+
+    footer nav ul li a {
+        font-size: 1.3rem;
+    }
+}
+
