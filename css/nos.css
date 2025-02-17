@@ -182,16 +182,16 @@ section {
 
 section h1 {
     font-size: 2.5rem;
-    color: #4a8a2f; /* Verde mais equilibrado */
+    color: #90c44d; /* Verde mais equilibrado */
     margin-bottom: 15px;
     text-align: center;
 }
 
 section h2 {
     font-size: 2rem;
-    color: #cc6b2f; /* Tom terroso para harmonizar */
+    color:   #f56980; /* Tom terroso para harmonizar */
     margin-bottom: 10px;
-    border-bottom: 3px solid #cc6b2f;
+    border-bottom: 3px solid   #f56980;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -212,7 +212,7 @@ section ul {
 
 section ul li {
     font-size: 1.3rem;
-    color: #4a8a2f;
+    color: #749c40;
     margin: 5px 0;
     font-weight: 500;
 }

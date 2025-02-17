@@ -159,7 +159,7 @@ header nav ul li a:hover {
 /* Seção principal */
 main {
     padding: 80px 40px 40px;
-    background-color: #383838; /* Fundo branco */
+    background-color: #f7efda;
     margin: 20px auto;
     max-width: 1200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -180,13 +180,13 @@ h1 {
 
 h1 {
     font-size: 2rem;
-    color:  rgb(197, 115, 37);
+    color:    #f56980;
     font-weight: bolder ;
 }
 
 h2 {
     font-size: 1.5rem;
-    color:  rgb(202, 112, 27);
+    color:       #e46177;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -212,11 +212,10 @@ section.dicas ul div.menor{
 }
 section.dicas ul li{
     margin: 0 3vw 5vw 0;
-    background: linear-gradient(to right, #296d39, #146627);
+    background: #a8da67;
     padding: 2vw;
     border-radius: 20px;
     color: #161616;
-    box-shadow: 0 5px 9px 0 rgb(32, 32, 32);
     width: 50%;
 }
 /*========================================
