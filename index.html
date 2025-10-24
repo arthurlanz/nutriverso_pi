@@ -1,334 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alimentação Saudável</title>
-    <link rel="stylesheet" href="css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="css/index.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/bd5b44309d.js" crossorigin="anonymous"></script>
+    <title>NutriVita | Sua Jornada para a Alimentação Saudável</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body class="inicial">
-    <header class="home">
-        <a href="index.html">
-            <img class="logo" src="src/imagens/logo-removebg-preview.png" alt="logo" width="100" height="100">
-        </a>
-        <!-- Botão de menu toggle -->
-        <div class="menu-toggle">☰</div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="sugestao.html" class="animated-link">Sugestões</a>
-                </li>
-                <li>
-                    <a href="agua.html" class="animated-link">Água no organismo</a>
-                </li>
-                <li>
-                    <a href="veganos.html" class="animated-link">Veganos</a>
-                </li>
-                <li>
-                    <a href="dicas.html" class="animated-link">Dicas</a>
-                </li>
-                <li>
-                    <a href="nos.html" class="animated-link">Sobre Nos</a>
-                </li>
+    <header class="header">
+        <a href="index.html" class="header__logo">NutriVita</a>
+        
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-menu__list">
+                <li class="nav-menu__item"><a href="#servicos" class="nav-menu__link">Serviços</a></li>
+                <li class="nav-menu__item"><a href="planos.html" class="nav-menu__link">Planos</a></li>
+                <li class="nav-menu__item"><a href="sobre.html" class="nav-menu__link">Sobre Nós</a></li>
+                <li class="nav-menu__item"><a href="contato.html" class="nav-menu__link">Contato</a></li>
             </ul>
         </nav>
+        
+        <button class="nav-toggle" aria-controls="navMenu" aria-expanded="false">
+            <span class="nav-toggle__icon"></span>
+        </button>
     </header>
 
-    <script>
-        // JavaScript para alternar a visibilidade do menu
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('header').classList.toggle('menu-open');
-        });
-    </script>
     <main>
-        <section class="textos"></section>
-        <div class="container fade-in">
-            <h1>Principais benefícios de uma alimentação saudável</h1>
-          </div>
-
-            <div class="carrossel">
-                <span class="seta" id="anterior">&#8592;</span>
-                <div class="texto">
-                  <div class="ativo">  Você já se perguntou por que uma alimentação saudável é tão importante para manter o seu corpo em
-                    equilíbrio, nutrido e protegido? </div>
-                  <div>A verdade é que comer de maneira adequada é crucial para o bom
-                    funcionamento do organismo. Nosso corpo precisa de um fornecimento constante de
-                    vitaminas, nutrientes e minerais para se manter ativo e saudável.</div>
-                  <div> Esses elementos essenciais são obtidos principalmente através de uma alimentação variada e equilibrada.
-                    Seguir uma dieta balanceada não traz benefícios apenas para a saúde física, mas também para o bem-estar
-                    mental. Com mais energia e disposição, quem adota hábitos alimentares saudáveis reduz o risco de
-                    desenvolver doenças como obesidade, câncer, artrite, anemia, diabetes e hipertensão, condições muitas
-                    vezes associadas a escolhas alimentares inadequadas. Lembre-se: adotar um estilo de vida mais saudável
-                    envolve disciplina, mudança de hábitos e comprometimento. O primeiro passo nessa jornada é fazer
-                    escolhas alimentares mais conscientes e nutritivas.</div>
-                </div>
-                <span class="seta" id="proximo">&#8594;</span>
-              </div>
-            
-              <script>
-                // Referências aos elementos
-                const textos = document.querySelectorAll(".texto > div");
-                const botaoAnterior = document.getElementById("anterior");
-                const botaoProximo = document.getElementById("proximo");
-                let indiceAtual = 0;
-            
-                // Função para atualizar o texto visível
-                function atualizarTexto() {
-                  textos.forEach((texto, indice) => {
-                    texto.classList.toggle("ativo", indice === indiceAtual);
-                  });
-                }
-            
-                // Eventos de clique
-                botaoAnterior.addEventListener("click", () => {
-                  indiceAtual = (indiceAtual - 1 + textos.length) % textos.length;
-                  atualizarTexto();
-                });
-            
-                botaoProximo.addEventListener("click", () => {
-                  indiceAtual = (indiceAtual + 1) % textos.length;
-                  atualizarTexto();
-                });
-              </script>
+        <section id="hero" class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Viva sua Melhor Vida com Nutrição Inteligente.</h1>
+                <p class="hero__subtitle">Planos personalizados e acompanhamento especializado para seus objetivos de saúde.</p>
+                <a href="planos.html" class="btn btn--primary">Descubra Nossos Planos</a>
+            </div>
         </section>
-        <section class="tabela">
 
-            <h2>Não sabe por onde começar a cuidar da sua alimentação? <br>
-            Confira na tabela abaixo o peso ideal para sua altura:
-            </h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ALTURA</th>
-                        <th>PESO NORMAL</th>
-                        <th>SOBREPESO</th>
-                        <th>OBESIDADE CLASSE 1</th>
-                        <th>OBESIDADE CLASSE 2</th>
-                        <th>OBESIDADE CLASSE 3</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>152–155 CM</td>
-                        <td>44–58 kg</td>
-                        <td>58–69 kg</td>
-                        <td>69–82 kg</td>
-                        <td>81–93 kg</td>
-                        <td>&gt; 93 kg</td>
-                    </tr>
-                    <tr>
-                        <td>152–155 CM</td>
-                        <td>47–61 kg</td>
-                        <td>62–74 kg</td>
-                        <td>74–87 kg</td>
-                        <td>87–100 kg</td>
-                        <td>&gt; 100 kg</td>
-                    </tr>
-                    <tr>
-                        <td>157–160 CM</td>
-                        <td>50–65 kg</td>
-                        <td>66–79 kg</td>
-                        <td>79–93 kg</td>
-                        <td>93–106 kg</td>
-                        <td>&gt; 106 kg</td>
-                    </tr>
-                    <tr>
-                        <td>162–165 CM</td>
-                        <td>54–69 kg</td>
-                        <td>70–84 kg</td>
-                        <td>84–98 kg</td>
-                        <td>98–113 kg</td>
-                        <td>&gt; 113 kg</td>
-                    </tr>
-                    <tr>
-                        <td>168–170 CM</td>
-                        <td>57–74 kg</td>
-                        <td>74–89 kg</td>
-                        <td>89–104 kg</td>
-                        <td>104–119 kg</td>
-                        <td>&gt; 119 kg</td>
-                    </tr>
-                    <tr>
-                        <td>173–175 CM</td>
-                        <td>60–78 kg</td>
-                        <td>79–94 kg</td>
-                        <td>95–110 kg</td>
-                        <td>110–127 kg</td>
-                        <td>&gt; 127 kg</td>
-                    </tr>
-                    <tr>
-                        <td>178–180 CM</td>
-                        <td>64–83 kg</td>
-                        <td>84–99 kg</td>
-                        <td>100–117 kg</td>
-                        <td>117–134 kg</td>
-                        <td>&gt; 134 kg</td>
-                    </tr>
-                    <tr>
-                        <td>183–185 CM</td>
-                        <td>67–87 kg</td>
-                        <td>88–105 kg</td>
-                        <td>106–123 kg</td>
-                        <td>123–141 kg</td>
-                        <td>&gt; 141 kg</td>
-                    </tr>
-                    <tr>
-                        <td>188–190 CM</td>
-                        <td>71–89 kg</td>
-                        <td>93–108 kg</td>
-                        <td>112–127 kg</td>
-                        <td>130–145 kg</td>
-                        <td>&gt; 145 kg</td>
-                    </tr>
-                </tbody>
-            </table>
-            <section class="textos">
-            <div class="bloco">
-                <div class="conteudo">
-                    <h2>Entenda oque os alimentos que você consome diariamente fazem no seu corpo:</h2>
+        <section id="servicos" class="section services">
+            <h2 class="section__title">Nossos Pilares para o Seu Sucesso</h2>
+            <div class="services__grid">
+                
+                <div class="card service-card">
+                    <h3 class="card__title">Acompanhamento 1:1</h3>
+                    <p class="card__text">Consultas personalizadas com nutricionistas experientes para traçar a melhor rota.</p>
+                </div>
+                
+                <div class="card service-card">
+                    <h3 class="card__title">Planos Flexíveis</h3>
+                    <p class="card__text">De reeducação alimentar a foco em performance, temos o plano ideal para você.</p>
+                </div>
+                
+                <div class="card service-card">
+                    <h3 class="card__title">Comunidade e Suporte</h3>
+                    <p class="card__text">Faça parte de nossa comunidade exclusiva e receba suporte diário no seu progresso.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="planos-preview" class="section plans-preview">
+            <h2 class="section__title">Planos Feitos Para Você</h2>
+            <p class="section__subtitle">Veja o que mais combina com seus objetivos e orçamento.</p>
+            
+            <div class="plans-preview__cards">
+                <div class="card plan-card">
+                    <h3 class="card__title">Essencial</h3>
+                    <p class="plan-card__price">R$ 99,90/mês</p>
+                    <a href="planos.html" class="btn btn--secondary">Ver Detalhes</a>
+                </div>
+                
+                <div class="card plan-card card--featured">
+                    <span class="card--featured__tag">Mais Popular</span>
+                    <h3 class="card__title">Premium</h3>
+                    <p class="plan-card__price">R$ 189,90/mês</p>
+                    <a href="planos.html" class="btn btn--primary">Assinar Agora</a>
+                </div>
+                
+                <div class="card plan-card">
+                    <h3 class="card__title">VIP Pro</h3>
+                    <p class="plan-card__price">R$ 299,90/mês</p>
+                    <a href="planos.html" class="btn btn--secondary">Ver Detalhes</a>
                 </div>
             </div>
-            <div class="bloco">
-                <div class="conteudo">
-                    <h3>Carboidratos</h3>
-                    <p>
-                        A principal função dos carboidratos é ser fonte de energia, entretanto eles também estão relacionados
-                        com a estrutura dos ácidos nucleicos e funções estruturais. Seu consumo é essencial para o bom
-                        funcionamento do organismo, o recomendado é que cerca de 45% a 65% das calorias diárias sejam do consumo
-                        desse grupo de alimentos, porém deve-se ficar atento à necessidade metabólica de cada pessoa. Quando
-                        ingeridos em excesso, podem estar relacionados com problemas de saúde, como a obesidade, entretanto uma
-                        alimentação pobre em carboidratos também pode ser prejudicial. Desse modo, é importante saber dosar a
-                        quantidade de carboidratos ingeridos para que esses cumpram adequadamente seu papel.
-                    </p>
-                </div>
+        </section>
+
+        <section id="cta-contato" class="cta-newsletter">
+            <div class="cta-newsletter__content">
+                <h2 class="cta-newsletter__title">Receba Dicas Exclusivas!</h2>
+                <p>Assine nossa newsletter e receba receitas e dicas de nutrição diretamente no seu e-mail.</p>
+                <form class="cta-newsletter__form">
+                    <input type="email" placeholder="Seu melhor e-mail..." required>
+                    <button type="submit" class="btn btn--secondary">Quero Assinar</button>
+                </form>
             </div>
-              <div class="bloco">
-                <div class="conteudo">      <h3>Proteínas</h3>
-                    <p>
-                        As proteínas nos fornecem os aminoácidos, que são compostos necessários para as reações químicas que
-                        ocorrem em nosso organismo. Como não produzimos alguns desses compostos, devemos ingeri-los através de
-                        certos alimentos. As proteínas que possuem todos ou a maioria dos aminoácidos essenciais para nosso
-                        organismo têm um alto valor biológico. Temos como exemplo as proteínas de origem animal: ovos, carnes,
-                        leite e derivados. Aquelas que não possuem a maioria dos aminoácidos essenciais são as de baixo valor
-                        biológico e comumente são as de origem vegetal.
-        
-                    </p>
-                </div>
-              </div>
-            </section>
-              <script>
-                const elementos = document.querySelectorAll('.conteudo');
-            
-                window.addEventListener('scroll', () => {
-                  elementos.forEach(el => {
-                    const posicao = el.getBoundingClientRect().top;
-                    const alturaTela = window.innerHeight;
-            
-                    if (posicao < alturaTela - 100) {
-                      el.classList.add('visivel');
-                    }
-                  });
-                });
-              </script>
-    
         </section>
-        <section class="textos">
-            <h2>Entenda oque os alimentos que você consome diariamente fazem no seu corpo:</h2>
-            <h3>Carboidratos</h3>
-            <p>
-                A principal função dos carboidratos é ser fonte de energia, entretanto eles também estão relacionados
-                com a estrutura dos ácidos nucleicos e funções estruturais. Seu consumo é essencial para o bom
-                funcionamento do organismo, o recomendado é que cerca de 45% a 65% das calorias diárias sejam do consumo
-                desse grupo de alimentos, porém deve-se ficar atento à necessidade metabólica de cada pessoa. Quando
-                ingeridos em excesso, podem estar relacionados com problemas de saúde, como a obesidade, entretanto uma
-                alimentação pobre em carboidratos também pode ser prejudicial. Desse modo, é importante saber dosar a
-                quantidade de carboidratos ingeridos para que esses cumpram adequadamente seu papel.
-
-            </p>
-        </section>
-        <section class="textos">
-            <h3>Proteínas</h3>
-            <p>
-                As proteínas nos fornecem os aminoácidos, que são compostos necessários para as reações químicas que
-                ocorrem em nosso organismo. Como não produzimos alguns desses compostos, devemos ingeri-los através de
-                certos alimentos. As proteínas que possuem todos ou a maioria dos aminoácidos essenciais para nosso
-                organismo têm um alto valor biológico. Temos como exemplo as proteínas de origem animal: ovos, carnes,
-                leite e derivados. Aquelas que não possuem a maioria dos aminoácidos essenciais são as de baixo valor
-                biológico e comumente são as de origem vegetal.
-
-            </p>
-        </section>
-        <section class="vitaminas">
-            <h3 class="vitaminas">Vitaminas</h3>
-            <ul>
-                <li class="um">
-                    <h4>Vitamina B12</h4>
-                    <p>É fundamental para a formação de glóbulos vermelhos e a função neurológica. A deficiência pode
-                    levar a problemas neurológicos e anemia. Além de alimentos fortificados, os suplementos de B12
-                    são uma maneira eficaz de garantir a ingestão adequada</p>
-                </li>
-                <li class="dois">
-                    <h4>Vitamina D</h4>
-                    <p>Crucial para a saúde óssea e o sistema imunológico. Em regiões com pouca luz solar, suplementos
-                        de vitamina D2 ou D3 (a versão vegana é derivada de líquen) são recomendados. A exposição ao sol
-                        é benéfica, mas o uso de protetor solar e estilos de vida modernos podem limitar a produção
-                        natural de vitamina D</p>
-                </li>
-                <li class="um">
-                    <h4>Ferro</h4>
-                    <p>O ferro não-heme encontrado em alimentos vegetais é menos absorvido que o ferro heme de fontes
-                        animais. Consumir vitamina C com alimentos ricos em ferro (como suco de laranja com feijão ou
-                        lentilhas) pode melhorar a absorção. Além disso, evite consumir café ou chá imediatamente após
-                        as refeições, pois eles podem inibir a absorção do ferro</p>
-                </li>
-                <li class="dois">
-                    <h4>Cálcio</h4>
-                    <p>Essencial para ossos e dentes fortes. Os veganos devem garantir que estão obtendo cálcio
-                        suficiente de fontes como tofu, bebidas vegetais fortificadas e vegetais de folhas verdes. A
-                        ingestão adequada de cálcio também pode ser apoiada com uma dieta variada e equilibrada</p>
-                </li>
-                <li class="um">
-                    <h4>Ômega 3</h4>
-                    <p>Importante para a saúde cardiovascular e cerebral. Sementes de linhaça, chia e nozes são
-                        excelentes fontes vegetais de ALA, um tipo de ômega-3. Para obter EPA e DHA, que são formas mais
-                        ativas de ômega-3, os suplementos de algas são uma boa opção para veganos</p>
-                </li>
-                <li class="dois">
-                    <h4>Proteína</h4>
-                    <p>Disponível em muitos alimentos vegetais. É importante consumir uma variedade de fontes para
-                        garantir todos os aminoácidos essenciais. </p>
-                </li>
-            </ul>
-
-        </section>
-
-
-
-
     </main>
-    <footer>
-        <p>Insituto Federal Catarinense Campus Araquari, Rodovia BR 280, Km 27, nº 5200. Bairro Colégio Agrícola. CEP 89245-000. Araquari (SC).<br></p>
-        <p>&copy; 2024 Desenvolvido por Arthur Lanznaster, Clara Tesser Carvalho, Gabriel Sombrio, Maria Heloiza
-            Vitoreti e Roberta Ribeiro.<br>
-            Todos os direitos reservados.</p>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/onutriverso.saude/?utm_source=ig_web_button_share_sheet"><i class="fa-brands fa-instagram"></i></a>
-                </li>
-            </ul>
-        </nav>
-
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__col">
+                <h4 class="footer__title">NutriVita</h4>
+                <p>Nutrição que transforma a sua vida.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Links Rápidos</h4>
+                <ul>
+                    <li><a href="planos.html">Nossos Planos</a></li>
+                    <li><a href="sobre.html">Nossa Equipe</a></li>
+                    <li><a href="contato.html">Ajuda/Suporte</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Siga-nos</h4>
+                <p>@nutrivita_oficial</p>
+            </div>
+        </div>
+        <div class="footer__copy">&copy; 2025 NutriVita. Todos os direitos reservados.</div>
     </footer>
-
-
-
+    
+    <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>

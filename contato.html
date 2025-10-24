@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - NutriVita | Fale Conosco</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header"></header>
+
+    <main>
+        <section class="section header-page">
+            <h1 class="section__title">Tem Dúvidas? Fale com a Nossa Equipe.</h1>
+            <p class="section__subtitle">Preencha o formulário abaixo ou utilize nossos canais diretos de comunicação.</p>
+        </section>
+
+        <section id="contato" class="section contato-section">
+            <div class="contato__container">
+                
+                <form class="card contato__form" id="contactForm">
+                    <h3 class="card__title">Mande sua Mensagem</h3>
+                    
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto">
+                        <option value="duvida">Dúvidas sobre Planos</option>
+                        <option value="suporte">Suporte Técnico</option>
+                        <option value="parceria">Parcerias</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                    
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    
+                    <button type="submit" class="btn btn--primary">Enviar Mensagem</button>
+                    <p class="form__status" id="formStatus"></p>
+                </form>
+
+                <div class="contato__info">
+                    <h3 class="card__title">Informações Diretas</h3>
+                    <p><strong>WhatsApp:</strong> (47) 99999-9999</p>
+                    <p><strong>E-mail:</strong> contato@nutrivita.com.br</p>
+                    
+                    <h3 class="card__title">Horário de Atendimento</h3>
+                    <p>Segunda à Sexta, das 9h às 18h.</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer"></footer>
+    
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

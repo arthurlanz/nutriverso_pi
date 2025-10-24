@@ -1,0 +1,675 @@
+/*
+ * ----------------------------------------
+ * 1. VARIÁVEIS E RESET BÁSICO
+ * ----------------------------------------
+ */
+:root {
+    --primary-color: #4CAF50; /* Verde Saúde */
+    --secondary-color: #2196F3; /* Azul Engajamento */
+    --text-color: #333;
+    --light-bg: #f7f7f7;
+    --font-stack: 'Poppins', sans-serif;
+    --padding-section: 4rem 5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/*
+ * ----------------------------------------
+ * 2. COMPONENTES REUTILIZÁVEIS
+ * ----------------------------------------
+ */
+.section {
+    padding: var(--padding-section);
+    text-align: center;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.section__subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: #388E3C; /* Verde mais escuro */
+}
+
+.btn--secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn--secondary:hover {
+    background-color: #1976D2; /* Azul mais escuro */
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+
+/*
+ * ----------------------------------------
+ * 3. HEADER & NAVEGAÇÃO
+ * ----------------------------------------
+ */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    /* Estado inicial para mobile (oculto) */
+    display: none; 
+}
+
+.nav-menu__list {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu__link {
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-menu__link::after { /* Efeito de sublinhado profissional */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-menu__link:hover::after {
+    width: 100%;
+}
+
+/* Botão Toggle (Hamburguer) - Visível apenas em mobile */
+.nav-toggle {
+    display: block; /* Padrão Mobile: Visível */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/*
+ * ----------------------------------------
+ * 4. SEÇÕES ESPECÍFICAS
+ * ----------------------------------------
+ */
+
+/* HERO */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* Substitua 'hero-bg.jpg' por uma imagem relevante */
+    color: white;
+    text-align: center;
+    padding: 8rem 5%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before { /* Overlay sutil para a legibilidade do texto */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+
+/* SERVIÇOS (PILARESS) */
+.services {
+    background-color: var(--light-bg);
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    text-align: left;
+}
+
+
+/* PLANOS PREVIEW */
+.plans-preview {
+    padding-bottom: 4rem;
+}
+
+.plans-preview__cards {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    border: 1px solid #eee;
+}
+
+.plan-card__price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Card em Destaque */
+.card--featured {
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05); /* Leve aumento para destaque */
+    position: relative;
+}
+
+.card--featured__tag {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* CTA NEWSLETTER */
+.cta-newsletter {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.cta-newsletter__content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-newsletter__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-newsletter__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cta-newsletter__form input[type="email"] {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+/*
+ * ----------------------------------------
+ * 5. RODAPÉ
+ * ----------------------------------------
+ */
+.footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 3rem 5%;
+}
+
+.footer__columns {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+.footer__title {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li a {
+    color: #ccc;
+    display: block;
+    padding: 0.2rem 0;
+}
+
+.footer__copy {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/*
+ * ----------------------------------------
+ * 6. MEDIA QUERIES (ADAPTANDO PARA TABLET E DESKTOP)
+ * ----------------------------------------
+ */
+@media (min-width: 768px) {
+    
+    /* NAV DESKTOP */
+    .nav-toggle {
+        display: none; /* Esconde o botão hamburguer no desktop */
+    }
+    
+    .nav-menu {
+        display: block; /* Mostra o menu de navegação no desktop */
+    }
+    
+    /* SERVIÇOS */
+    .services__grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+    }
+
+    /* PLANOS PREVIEW */
+    .plans-preview__cards {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+    }
+
+    /* FOOTER */
+    .footer__columns {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+    }
+
+    /* CTA */
+    .cta-newsletter__form {
+        flex-direction: row; /* Coloca o campo e o botão lado a lado */
+    }
+    
+    .cta-newsletter__form input[type="email"] {
+        flex-grow: 1; /* Faz o campo de e-mail ocupar o espaço restante */
+    }
+}
+/* ----------------------------------------
+ * 7. ESTILOS DE PÁGINAS INTERNAS
+ * ---------------------------------------- */
+
+/* Título de Páginas Internas */
+.header-page {
+    padding-top: 6rem; /* Mais espaçamento no topo para destaque */
+    background-color: var(--light-bg);
+}
+
+
+/* PLANOS (Pricing Grid) */
+.pricing-grid {
+    background-color: white;
+}
+
+.pricing-grid .plans-preview__cards { /* Reutiliza o estilo do grid de 3 colunas */
+    max-width: 1200px;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pricing-card {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+}
+
+.pricing-card__desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    min-height: 40px; /* Para alinhar os cards */
+}
+
+.pricing-card__price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.pricing-card__period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+}
+
+.pricing-card__features {
+    text-align: left;
+    margin: 1.5rem 0 2rem;
+}
+
+.pricing-card__features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #eee;
+    color: var(--text-color);
+}
+
+.check-icon {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.feature--disabled {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+/* SOBRE NÓS (Equipe) */
+.historia {
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.historia__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.historia p {
+    margin-bottom: 1rem;
+}
+
+.equipe {
+    background-color: var(--light-bg);
+}
+
+.equipe__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.equipe-card {
+    text-align: center;
+}
+
+.equipe-card__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--primary-color);
+}
+
+.equipe-card__role {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.equipe-card__bio {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+/* CONTATO */
+.contato-section {
+    background-color: white;
+}
+
+.contato__container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna em mobile */
+    gap: 3rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.contato__form {
+    padding: 2rem;
+}
+
+.contato__form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.contato__form input,
+.contato__form textarea,
+.contato__form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contato__form textarea {
+    resize: vertical;
+}
+
+.contato__form button {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.form__status {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.contato__info {
+    padding: 2rem 0;
+}
+
+.contato__info p {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+
+/* FAQ */
+.faq {
+    background-color: var(--light-bg);
+}
+
+.faq__container {
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.faq__item {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.faq__question {
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    list-style: none; /* Remove seta padrão em alguns browsers */
+    position: relative;
+    padding-right: 20px;
+}
+
+.faq__question::marker, .faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.faq__question::after { /* Adiciona um ícone de seta customizado */
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.faq__item[open] .faq__question::after {
+    content: '−';
+}
+
+.faq__answer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    color: #555;
+}
+
+
+/* ----------------------------------------
+ * 8. MEDIA QUERIES PARA LAYOUTS ESPECÍFICOS
+ * ---------------------------------------- */
+@media (min-width: 768px) {
+    
+    /* NAV: Estilo para links ativos (melhoria) */
+    .nav-menu__link.active {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+    .nav-menu__link.active::after {
+        width: 100%;
+    }
+
+    /* CONTATO */
+    .contato__container {
+        grid-template-columns: 2fr 1fr; /* 2/3 para o formulário, 1/3 para info */
+    }
+    
+    /* HISTORIA (para texto e imagem lado a lado, se houvesse imagem) */
+    .historia__content {
+        padding-right: 2rem;
+    }
+}
